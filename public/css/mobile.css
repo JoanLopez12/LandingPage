@@ -569,26 +569,30 @@ border-bottom: none;
 }
 .prueba_section{
     width: 100vw;
-    height: auto;
+    height: 41rem;
     grid-area: prueba;
     display: flex;
   justify-content: center;
-   background-color: red;
+  
    flex-wrap: wrap;
-   
+   align-content: center;
+  
    justify-items: center;
+   
 }
 
 .box{
     position: relative;
-    width: 15rem;
-    height: 21rem;
-    background-color: black;
+    width: 19rem;
+  height: 90%;
+    background-color:black ;
+    box-shadow: 6px 9px 18px 2px rgba(0,0,0,0.69);
+
     
 }
 .box_img{
     width: 15rem;
-    background-color: red;
+   
     position: absolute;
     top: 0;
     left: 0;

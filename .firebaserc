@@ -1,7 +1,8 @@
 {
   "projects": {
     "default": "joanlopezcv",
-    "joan": "joanlopezcv"
+    "joan": "joanlopezcv",
+    "JoanMSI": "joanlopezcv"
   },
   "targets": {}
 }

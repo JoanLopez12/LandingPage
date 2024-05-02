@@ -1,0 +1,968 @@
+:root{
+    --font-family-title: Raleway;
+    --background-color-contain: #0C2270;
+    --color-font:rgba(245, 245, 245, 0.877);
+}
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+    
+
+
+
+body{
+    width: 32rem;
+    height:100%;
+    
+}
+
+.body-container{
+    width: 32rem;
+    height: 100%;
+   
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "main"
+    "main"
+    "main"
+    "main"
+    "main"
+    "side"
+    "contacto"
+    "footer ";
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1,auto);
+    
+    
+}
+
+.container-header{
+    grid-area: header;
+    /*background-color: var(--background-color-contain);*/
+    
+    text-align: center;
+    
+    width:100vw;
+    height: 100vh;
+    position:relative;
+
+    justify-content: center;
+
+   
+ 
+}
+.header-container{
+    background-color: var(--background-color-contain);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5))
+        ,url(/css/img_fondos/turntable-1109588_1920.jpg);
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+    
+    
+
+}
+
+.nav{
+    border-block-end-color: .1rem solid  var(--color-font); 
+    
+    position:absolute;
+    right: 0;
+   
+    width: 100%;
+    top: 0;
+  
+    
+}
+.nav__checkbox{
+    display:none ;
+}
+.nav__toggle{
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    margin: 1rem 2rem;
+   
+    
+}
+.nav__toggle svg{
+    width: 4rem;
+    fill: var(--color-font);
+}
+.nav__toggle .close{
+    display: none ;
+}
+.nav__toggle .close,
+.nav__toggle .menu{
+    margin-block-start: .5rem;
+}
+
+.nav__menu{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1rem;
+}
+.nav__menu li{
+    display:none ;
+    list-style-type: none;
+   
+    
+}
+.nav__menu a{
+    text-decoration: none;
+    font-family: var(--font-family-title);
+    color: var(--color-font);
+    font-size: 2rem;
+}
+
+.nav__menu a:hover{
+    color: rgba(0,0,0,0.5);
+}
+.menu__logo{
+    height: 3rem;
+    
+}
+
+#nav__checkbox:checked ~ ul.nav__menu li{
+    display: block;
+}
+#nav__checkbox:checked ~ label.nav__toggle .close{
+    display: none;
+}
+#nav__checkbox:checked ~label.nav__toggle.menu{
+    display: none;
+}
+
+.title_container{
+    position: absolute;
+    position: bottom ;
+    
+   
+    
+   
+   
+    
+    
+   
+}
+
+.container-header h1{
+    font-size: 5rem;
+    text-justify: center;
+    font-family: var(--font-family-title);
+    margin: 10rem 3rem 0rem 3rem;
+    color: var(--color-font);
+    
+    
+    
+}
+
+.container-header button{
+    width: 20rem;
+    height: 7rem;
+    margin: 1rem 0rem 8rem 0rem;
+    border-radius: 5rem;
+    border-color: #4160d1;
+    font-family: var(--font-family-title);
+    background-color: #4160d1;
+    font-size: 1.9rem;
+    font-style: bolder;
+    box-shadow: 0.2rem 0.2rem 2rem rgba(0,0,0,0.8);
+    color: var(--color-font);
+    cursor: pointer;
+    
+}
+
+
+.main-container{
+    grid-area: main;
+    width: 100vw;
+    background-color: var(--color-font);
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(1,auto);
+    grid-auto-columns: 32rem;
+    grid-template-areas: 
+    "ppt"
+    "aptitudes"
+    "services"
+    "services"
+    "prueba"
+    "prueba"
+    "trabajos"
+    "trabajos";
+   
+}
+.presentation-container{
+    grid-area: ppt;
+    height: 100%;
+    width: 100vw;
+   
+}
+.title-main-container{
+    margin: 2rem 0rem 1rem  0rem;
+    width: 100vw;
+}
+
+
+.main-container h2{
+    font-family: var(--font-family-title);
+    font-size: 3rem;
+    text-align: center;
+}
+.subtitle-main{
+    font-family: var(--font-family-title);
+    font-size: 1.58rem;
+    text-align: center;
+    text-decoration: overline;
+}
+
+.main-text{
+    font-family: var(--font-family-title);
+    font-size: 2rem;
+    padding: 0rem 4rem;
+    margin-top: 4rem;
+}
+.download_cv{
+    width: 100%;
+   text-align: center;
+   margin: 7rem 0;
+   
+
+
+}
+.btn_cv{
+    font-family: var(--font-family-title);
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--background-color-contain);
+    width:25rem;
+    display: inline-block;
+    padding: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem;
+    color:var(--color-font);
+    
+}
+
+.aptitudes-container{
+    grid-area: aptitudes;
+    background-color:var(--color-font);
+    width: 100vw;
+    height: 100%;
+   
+   display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   justify-content: space-between;
+
+   background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5))
+        ,url(/css/img_fondos/music-5705801_1920.jpg);
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+  
+    
+   
+    
+    
+
+
+}
+.photo{
+   width: 25rem; 
+   margin-top: 5rem;
+    
+}
+.joan_img{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0rem;
+    
+    
+    
+}
+
+.info-container{
+    width: 80%;
+    height: auto;
+    margin-block-start: 2rem;
+    padding: 1rem;
+    margin-bottom: 8rem;
+}
+.info-container h1{
+  text-align: center;
+  font-size: 3rem;
+  font-family: var(--font-family-title);
+  color: var(--color-font);
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+.progress-bar{
+    grid-area: aptitudes;
+    width: 100%;
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap:3rem;
+    grid-template-areas: 
+    "progress_1"
+    "progress_2"
+    "progress_3"
+    "progress_4"
+    "progress_5"
+    "progress_6"
+    "progress_7"
+    ;
+    
+    padding: 1rem 0rem 1rem 0rem ;
+    margin-block-start: 3rem;
+
+}
+
+.info-container progress{
+    width: 100%;
+    height: 1rem;
+    
+    
+}
+.progress-bar p{
+    color: white;
+    font-family: var(--font-family-title);
+    font-size: 2rem;
+
+}
+.bar1{
+    grid-area: progress_1;
+    width: 100%;
+    justify-self: start;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family-title);
+    
+    
+    
+}
+.bar1 >p{
+    display: flex;
+   
+    justify-content: center;
+   
+
+}
+
+    
+
+
+.bar2{
+    grid-area: progress_2;
+    width: 100%;
+    justify-self: start;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family-title);
+    
+     
+}
+.bar2 >p{
+    display: flex;
+   
+    justify-content: center;
+}
+
+.bar3{
+    grid-area: progress_3;
+    width: 100%;
+    justify-self: start;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family-title);
+   
+     
+}
+.bar3 >p{
+    display: flex;
+    
+    justify-content: center;
+}
+
+.bar4{
+    grid-area: progress_4;
+    width: 100%;
+    justify-self: start;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family-title);
+   
+     
+}
+.bar4 >p{
+    display: flex;
+    
+    justify-content: center;
+
+}
+
+.bar5{
+    grid-area: progress_5;
+    width: 100%;
+    justify-self: start;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family-title);
+    
+   
+     
+}
+.bar5 >p{
+    display: flex;
+    
+    justify-content: center;
+}
+.bar6{
+    grid-area: progress_6;
+    width: 100%;
+    justify-self: start;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family-title);
+   
+     
+}
+.bar6 >p{
+    display: flex;
+    
+    justify-content: center;
+}
+.bar7{
+    grid-area: progress_7;
+    width: 100%;
+    justify-self: start;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family-title);
+    color: var(--color-font);
+   
+     
+}
+.bar7>p{
+    display: flex;
+    
+    justify-content: center;
+}
+
+
+
+  
+  
+
+
+
+
+
+
+.services-container{
+    grid-area: services;
+    width: 100vw;
+    height: auto;
+    background-color: var(--background-color-contain);
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.services{
+    margin-block-start: 3rem;
+    display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    padding: 0rem .3rem;
+    
+}
+.services-container h1{
+    color: var(--color-font);
+    text-align: center;
+    font-size: 5rem;
+    font-family: var(--font-family-title) ;
+   
+    margin-block-start: 2rem;
+    text-justify: center;
+   
+    border-top: thin solid var(--color-font);
+    border-bottom: thin solid var(--color-font);
+    margin: 3rem auto;
+    padding: 0.2rem 1rem;
+    width: 25rem;
+}
+.services-container h2{
+    text-justify: center;
+    color: var(--color-font);
+    font-size: 2rem;
+    margin: 1rem 0rem;
+    box-sizing: inherit;
+   
+
+}
+.services-container p{
+    color: var(--color-font);
+    font-family: var(--font-family-title);
+    padding: 0rem 3rem 1rem 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.services-container img{
+    width: 5rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+
+}
+
+.service__1, .service__2, .service__3, .service__4, .service__5{
+display: flex;
+justify-items: center;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+height: 100%;
+
+border-radius: 1rem;
+border: .2rem solid var(--color-font);
+border-top: none;
+border-bottom: none;
+
+
+}
+.prueba_section{
+    width: 100vw;
+    height: 41rem;
+    grid-area: prueba;
+    display: flex;
+  justify-content: center;
+  
+   flex-wrap: wrap;
+   align-content: center;
+  
+   justify-items: center;
+   
+}
+
+.box{
+    position: relative;
+    width: 19rem;
+  height: 90%;
+    background-color:black ;
+    box-shadow: 6px 9px 18px 2px rgba(0,0,0,0.69);
+
+    
+}
+.box_img{
+    width: 15rem;
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+   
+}
+.box_img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.box:hover .box_img img{
+    opacity:0 ;
+}
+.box .content{
+    position: absolute;
+    bottom: 20px;
+    left:10%;
+    width: 80%;
+    height: 40px;
+    background-color: #fff;  
+    transition: 0.5s;
+    overflow: hidden;
+
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.box:hover .content{
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.box .content p{
+    margin: 10px 0 0;
+    padding: 0;
+    opacity: 0;
+    line-height: 1.2em;
+    transition: 0.5s;
+    text-align: justify;
+}
+.box:hover .content p{
+    opacity: 1;
+    transition-delay:0.5s ;
+}
+
+.trabajos-container{
+    grid-area: trabajos;
+    /*background-color: var(--color-font);*/
+    height: 100%;
+    width: 100vw;
+    
+    
+    
+}
+.trabajos-container h1{
+    color: var(--background-color-contain);
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: var(--font-family-title) ;
+
+  
+  
+    
+}
+.trabajos-container h2{
+    font-size: 2rem;
+    color: var(--background-color-contain);
+    margin-block-start: 2rem;
+    border-top: thin solid var(--background-color-contain);
+   text-align: center;
+    padding: 0.2rem 3rem;
+    width: 100vw;
+
+    border-radius: 1rem;
+    border: .2rem solid var(--background-color-contain);
+    border-top: none;
+    border-bottom: none;
+    
+    
+    
+    
+   
+    
+}
+
+.trabajos-container  iframe{
+    width:100%;
+    height: auto;
+    margin-block-start: 2rem;
+    padding: 0rem 2rem;
+    
+   
+}
+.trabajos-container h3{
+    font-size: var(--font-family-title);
+    font-size: 2rem;
+    color: var(--background-color-contain);
+    text-align: center;
+    margin-block-start: 3rem;
+    font-family: var(--font-family-title);
+    padding: 0rem 4rem 1.5rem 4rem;
+}
+.trabajos-container h3 i{
+    font-family: var(--font-family-title);
+    font-size: 1.5rem;
+    color: var(--background-color-contain);
+    text-align: center;
+}
+
+
+.side-container{
+    grid-area: side;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    
+   
+}
+
+.contact-container{
+    width: 100vw;
+    height: 100%;
+    background-color: var(--background-color-contain);
+
+}
+.contact-container h1{
+    color: var(--color-font);
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--font-family-title) ;
+    
+   
+   
+   
+    text-justify: center;
+   
+    border-top: thin solid var(--color-font);
+    
+    padding: .5rem;
+    margin: 1rem 15% 2rem 15%;
+    width: 70%;
+    
+}
+.card-container{
+    width: 100%;
+    height: auto;
+   
+    display: flex;
+    
+    
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.contact-container div{
+    width: 80%;
+    height: auto;
+    background-color: var(--color-font);
+    text-align: center;
+    font-family: var(--font-family-title);
+    color: var(--background-color-contain);
+    box-shadow: 0.2rem 0.2rem 1rem var(--color-font) ;
+    border-radius: .88rem;
+    margin: 4rem 0rem;
+    
+       
+}
+
+.contact-container h2{
+margin: .5rem 0rem;
+}
+.contact-container h3{
+    margin: 1rem 0rem 2rem 0rem;
+    }
+
+.contact-container h3{
+    font-size: 1.3rem;
+
+}
+.text-email{
+    font-size: 1.5rem;
+    font-family: var(--font-family-title);
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.icono-card{
+    width: 10%;
+    margin: 1rem 0 1rem 0;
+}
+
+.social-media{
+    
+    
+ 
+    
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    
+    justify-content: center;
+   
+    
+   
+
+}
+.link{
+    
+    text-decoration: none;
+    
+    width: 5rem;
+    display: inline-block;
+    
+   
+    
+    
+}
+.social-icon1{
+    width: 4rem;
+    height: auto;
+
+
+    
+}
+.contacto-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5))
+        ,url(/css/img_fondos/coding-924920_1920.jpg);
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+    
+    
+    
+}
+.contenedor-formulario{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.form-container{
+    width: 90%;
+    height: 60%;
+    display: flex;
+  
+   flex-direction: column;
+   
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3rem  1rem  3rem rgba(245, 245, 245, 0.192);
+    
+}
+.form-container h1{
+    font-size: 3rem;
+    font-family: var(--font-family-title);
+    color: white;
+}
+.form-container input{
+    font-family: var(--font-family-title);
+    
+    border: none;
+    border-block-end: .2rem  solid var(--background-color-contain);
+    width: 70vw;
+    background-color:transparent;
+    outline: none;
+    resize: none;
+    transition: all 300ms;
+
+}
+
+
+.form-container label{
+    border: none;
+    padding: 1rem;
+    color: white;
+    
+    
+    
+}
+
+.form-container ::placeholder{
+    color: rgba(255, 255, 255, 0.534);
+    font-size: 2rem;
+}
+.form-container input{
+    padding: 2rem;
+    font-size: 2rem;
+    color: white;
+    
+  
+}
+.form-container label:hover{
+    color: #0C2270;
+    cursor: pointer;
+}
+#select-service{
+    width:70vw;
+    font-family: var(--font-family-title);
+   
+    border-radius: 1rem;
+    height: 7rem;
+    margin-block-start: 2rem;
+    color: white;  
+    padding:1.1rem 2rem;
+    margin-bottom: 2rem;
+    
+}
+
+#select-service::content{
+    color: violet;
+}
+#select-service::placeholder{
+    color: rgba(255, 255, 255, 0.534);
+    font-size: 2rem;
+    
+}
+.form-container button{
+    width: 40%;
+    height: auto;
+    padding: 1rem;
+    font-family: var(--font-family-title);
+    font-weight: bolder;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+    box-shadow: .4rem  .6rem  3rem rgba(245, 245, 245);
+    cursor: pointer;
+    margin-top: 3rem;
+    
+}
+
+
+
+
+.footer-container{
+    grid-area: footer;
+    height: 100%;
+    width: 100vw;
+    background-color: var(--background-color-contain);
+    font-family: var(--font-family-title);
+    font-size: 1.2rem;
+    color: rgba(209, 209, 209, 0.5);
+    text-align: end;
+}
+
+
+/*https://jonmircha.github.io/youtube-taller-maquetacion/portafolio-cv/*/
+

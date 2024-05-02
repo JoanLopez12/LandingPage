@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "LandingPage",
+    "public": "cv",
     "ignore": [
       "firebase.json",
       "**/.*",
