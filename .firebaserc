@@ -2,7 +2,8 @@
   "projects": {
     "default": "joanlopezcv",
     "joan": "joanlopezcv",
-    "JoanMSI": "joanlopezcv"
+    "JoanMSI": "joanlopezcv",
+    "LandingPage": "joanlopez-b2e3a"
   },
   "targets": {}
 }
